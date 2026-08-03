@@ -19,7 +19,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=8">
+    <link rel="stylesheet" href="style.css?v=9">
+    <script src="script.js?v=1" defer></script>
     <title>Vavo Academy — system tworzenia i sprzedaży stron</title>
     <script type="application/ld+json">
       {
@@ -39,6 +40,12 @@
     </script>
   </head>
   <body>
+    <div class="intro-screen" aria-hidden="true">
+      <div class="intro-screen__logo"><img src="vavo-logo-white.png" alt=""></div>
+      <p>VAVO <span>ACADEMY</span></p>
+      <small>BUILD · PUBLISH · SELL</small>
+    </div>
+
     <main class="landing">
       <div class="bg-word" aria-hidden="true">VAVO ACADEMY</div>
       <div class="tech-grid" aria-hidden="true"></div>
@@ -76,21 +83,11 @@
             </div>
           </div>
 
-          <section class="curriculum enter enter-6" aria-label="Dokładny zakres kursu">
-            <div class="curriculum-head">
-              <div><strong>CO DOKŁADNIE DOSTAJESZ</strong><p>Kompletną drogę od pustego ekranu do płacącego klienta.</p></div>
-              <span>6 ETAPÓW + COACHING 1:1</span>
-            </div>
-            <div class="curriculum-list">
-              <article><span>01</span><div><strong>STRONA, KTÓRĄ MOŻESZ SPRZEDAĆ</strong><p>Od zera do responsywnego projektu wyglądającego jak realizacja premium.</p></div></article>
-              <article><span>02</span><div><strong>PUBLIKACJA BEZ STRESU</strong><p>GitHub, Vercel, domena, DNS i SSL — krok po kroku.</p></div></article>
-              <article><span>03</span><div><strong>WIDOCZNOŚĆ W GOOGLE</strong><p>SEO, indeksacja i Search Console, żeby strona mogła pracować.</p></div></article>
-              <article><span>04</span><div><strong>SYSTEM ZDOBYWANIA KLIENTÓW</strong><p>Gdzie szukać leadów i jak pisać, żeby otwierać rozmowy.</p></div></article>
-              <article><span>05</span><div><strong>COLD CALLING BEZ ZGADYWANIA</strong><p>Mój schemat rozmowy, odpowiedzi na obiekcje i pewny follow-up.</p></div></article>
-              <article><span>06</span><div><strong>OFERTA, KTÓRA DOMYKA</strong><p>Pakiety, wycena, argumenty sprzedażowe i finalizacja współpracy.</p></div></article>
-              <article class="coaching"><span>1:1</span><div><strong>COACHING I ROZMOWY ZE MNĄ</strong><p>Bezpośredni feedback do Twojej strony, oferty i działań sprzedażowych — wiesz, co poprawić i jaki zrobić kolejny krok.</p></div><b>PERSONALNE WSPARCIE</b></article>
-            </div>
-          </section>
+          <button class="program-trigger enter enter-6" type="button" data-program-open aria-haspopup="dialog" aria-controls="course-program">
+            <span class="program-trigger__index">PROGRAM / 01</span>
+            <span class="program-trigger__copy"><strong>ZOBACZ, CO ZNAJDUJE SIĘ W KURSIE</strong><small>6 etapów, mój blueprint 100K i coaching 1:1.</small></span>
+            <span class="program-trigger__action">OTWÓRZ PROGRAM <i aria-hidden="true">↗</i></span>
+          </button>
         </div>
 
         <aside class="offer enter enter-4" aria-label="Oferta preorderowa Vavo Academy">
@@ -125,5 +122,38 @@
         </nav>
       </footer>
     </main>
+
+    <div class="program-modal" id="course-program" role="dialog" aria-modal="true" aria-labelledby="program-title" aria-hidden="true" inert>
+      <button class="program-modal__backdrop" type="button" data-program-close aria-label="Zamknij program kursu"></button>
+      <section class="program-panel">
+        <header class="program-panel__head">
+          <div>
+            <p>VAVO ACADEMY / PEŁNY PROGRAM</p>
+            <h2 id="program-title">Od pierwszej strony<br>do pierwszej sprzedaży.</h2>
+          </div>
+          <button class="program-panel__close" type="button" data-program-close aria-label="Zamknij program">×</button>
+        </header>
+
+        <div class="program-grid">
+          <article><span>01</span><div><strong>STRONA, KTÓRĄ MOŻESZ SPRZEDAĆ</strong><p>Od pustego ekranu do responsywnego projektu wyglądającego jak realizacja premium.</p></div></article>
+          <article><span>02</span><div><strong>PUBLIKACJA BEZ STRESU</strong><p>GitHub, Vercel, domena, DNS i SSL — wszystko podłączysz krok po kroku.</p></div></article>
+          <article><span>03</span><div><strong>WIDOCZNOŚĆ W GOOGLE</strong><p>SEO, indeksacja i Search Console, żeby gotowa strona mogła pracować.</p></div></article>
+          <article><span>04</span><div><strong>SYSTEM ZDOBYWANIA KLIENTÓW</strong><p>Dowiesz się, gdzie szukać leadów i jak pisać, żeby otwierać rozmowy.</p></div></article>
+          <article><span>05</span><div><strong>COLD CALLING BEZ ZGADYWANIA</strong><p>Dostajesz mój schemat rozmowy, odpowiedzi na obiekcje i skuteczny follow-up.</p></div></article>
+          <article><span>06</span><div><strong>OFERTA, KTÓRA DOMYKA</strong><p>Pakiety, wycena, argumenty sprzedażowe i finalizacja współpracy z klientem.</p></div></article>
+        </div>
+
+        <article class="program-coaching">
+          <span>1:1</span>
+          <div><strong>COACHING I BEZPOŚREDNIE ROZMOWY ZE MNĄ</strong><p>Dostajesz personalny feedback do swojej strony, oferty i działań sprzedażowych. Powiem Ci konkretnie, co poprawić i jaki zrobić kolejny krok.</p></div>
+          <b>PERSONALNE WSPARCIE</b>
+        </article>
+
+        <footer class="program-panel__foot">
+          <p>To nie zbiór przypadkowych lekcji. To kompletny proces, który przeprowadzi Cię od zera do gotowej oferty i rozmowy z klientem.</p>
+          <a href="https://buy.stripe.com/3cIeVd1qnbiU3ey0c0dby00" rel="noopener">KUP PREORDER — 50 ZŁ <span>↗</span></a>
+        </footer>
+      </section>
+    </div>
   </body>
 </html>
