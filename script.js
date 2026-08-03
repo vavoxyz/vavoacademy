@@ -75,19 +75,25 @@ window.addEventListener("pointermove", (event) => {
 resizeCanvas();
 drawField();
 
-const checkout = document.querySelector("[data-checkout]");
-const note = document.querySelector(".checkout-note");
-const closeNote = document.querySelector("[data-close]");
+const cursorLight = document.querySelector(".cursor-light");
+const tiltCard = document.querySelector("[data-tilt]");
 
-checkout?.addEventListener("click", (event) => {
-  event.preventDefault();
-  if (note) note.hidden = false;
-});
+if (matchMedia("(pointer: fine)").matches) {
+  window.addEventListener("pointermove", (event) => {
+    if (cursorLight) {
+      cursorLight.style.left = `${event.clientX}px`;
+      cursorLight.style.top = `${event.clientY}px`;
+    }
+  });
 
-closeNote?.addEventListener("click", () => {
-  if (note) note.hidden = true;
-});
+  tiltCard?.addEventListener("pointermove", (event) => {
+    const rect = tiltCard.getBoundingClientRect();
+    const x = (event.clientX - rect.left) / rect.width - 0.5;
+    const y = (event.clientY - rect.top) / rect.height - 0.5;
+    tiltCard.style.transform = `perspective(1100px) rotateX(${y * -5}deg) rotateY(${x * 7}deg) translateY(-3px)`;
+  });
 
-window.addEventListener("keydown", (event) => {
-  if (event.key === "Escape" && note) note.hidden = true;
-});
+  tiltCard?.addEventListener("pointerleave", () => {
+    tiltCard.style.transform = "perspective(1100px) rotateX(0) rotateY(0) translateY(0)";
+  });
+}

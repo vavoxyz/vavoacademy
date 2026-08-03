@@ -1,4 +1,4 @@
-# Vavo Academy — landing kursu 250 zł
+# Vavo Academy — landing preorderu 50 zł
 
 Gotowa statyczna paczka pod GitHub Pages lub Vercel.
 
@@ -7,15 +7,15 @@ Gotowa statyczna paczka pod GitHub Pages lub Vercel.
 - `index.html` — główny ekran
 - `style.css` — wygląd i wersja mobilna
 - `script.js` — delikatny ruch tła
-- `vavo-mark.webp` — wygenerowany znak V wykorzystywany w intro i karcie kursu
+- `vavo-logo-white.png` — biały znak V z przezroczystym tłem
 - `favicon.svg` — ikona strony
 - `regulamin.html` i `polityka-prywatnosci.html` — robocze strony prawne
 
 ## Przed publikacją reklam
 
 1. Uzupełnij regulamin i politykę prywatności prawdziwymi danymi.
-2. Utwórz nowy produkt Stripe za 250 zł i wstaw jego link do przycisku `data-checkout`.
-3. Po wstawieniu linku usuń komunikat techniczny `checkout-note` i obsługę blokady w `script.js`.
+2. Sprawdź link Stripe w przycisku `data-checkout` — powinien pobierać jednorazowo 50 zł.
+3. W Stripe pozostaw limit 50 płatności dla ceny preorderowej.
 4. Zrób płatność testową przed włączeniem reklam.
 
 ## Publikacja

@@ -6,16 +6,16 @@
     <meta name="theme-color" content="#050505">
     <meta name="description" content="Vavo Academy — kompletny kurs tworzenia i sprzedaży stron internetowych. Kod, domena, SEO i pozyskiwanie klientów.">
     <meta property="og:title" content="Vavo Academy — Strony, które umiesz sprzedać">
-    <meta property="og:description" content="Od pierwszej linijki kodu po pierwszego klienta. Pełny kurs Vavo Academy za 250 zł.">
+    <meta property="og:description" content="Od pierwszej linijki kodu po pierwszego klienta. Preorder Vavo Academy za 50 zł zamiast planowanych 250 zł.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://vavoacademy.pl/">
-    <meta property="og:image" content="https://vavoacademy.pl/vavo-mark.webp">
+    <meta property="og:image" content="https://vavoacademy.pl/vavo-logo-white.png">
     <link rel="canonical" href="https://vavoacademy.pl/">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="preload" href="vavo-mark.webp" as="image" type="image/webp">
+    <link rel="preload" href="vavo-logo-white.png" as="image" type="image/png">
     <link rel="stylesheet" href="style.css?v=2">
     <title>Vavo Academy — Strony, które umiesz sprzedać</title>
   </head>
@@ -25,7 +25,7 @@
       <div class="intro__scan"></div>
       <div class="intro__center">
         <div class="intro__logo-wrap">
-          <img class="intro__logo" src="vavo-mark.webp" alt="">
+          <img class="intro__logo" src="vavo-logo-white.png" alt="">
         </div>
         <p class="intro__wordmark">VAVO <span>ACADEMY</span></p>
         <div class="intro__progress"><i></i></div>
@@ -37,6 +37,8 @@
 
     <main class="hero" id="hero">
       <canvas class="field" id="field" aria-hidden="true"></canvas>
+      <div class="massive-word" aria-hidden="true">VAVO</div>
+      <div class="cursor-light" aria-hidden="true"></div>
       <div class="ambient ambient--one" aria-hidden="true"></div>
       <div class="ambient ambient--two" aria-hidden="true"></div>
       <div class="grid" aria-hidden="true"></div>
@@ -44,20 +46,20 @@
 
       <header class="header reveal-item">
         <a class="brand" href="#" aria-label="Vavo Academy — strona główna">
-          <span class="brand__icon"><img src="vavo-mark.webp" alt=""></span>
+          <span class="brand__icon"><img src="vavo-logo-white.png" alt=""></span>
           <span class="brand__text">VAVO</span>
           <span class="brand__academy">ACADEMY</span>
         </a>
 
         <div class="header__edition">
-          <span>EDYCJA</span>
-          <strong>01 / 2026</strong>
+          <span>PREORDER</span>
+          <strong>−80% / 50 MIEJSC</strong>
         </div>
       </header>
 
       <section class="hero__body">
         <div class="hero__copy">
-          <p class="kicker reveal-item"><span></span> KURS OD ZERA DO SPRZEDAŻY</p>
+          <p class="kicker reveal-item"><span></span> OD PIERWSZEJ STRONY DO PIERWSZEGO KLIENTA</p>
 
           <h1 class="reveal-item">
             Strony to nie hobby.<br>
@@ -66,58 +68,71 @@
           </h1>
 
           <p class="description reveal-item">
-            Od pierwszej linijki kodu po pozyskanie klienta, wycenę
-            i domknięcie sprzedaży. Jeden konkretny system bez lania wody.
+            Nie dostajesz samej teorii. Dostajesz konkretny proces: tworzysz stronę,
+            publikujesz ją i wychodzisz po klienta z gotowym systemem sprzedaży.
           </p>
 
           <ul class="syllabus reveal-item" aria-label="Zakres kursu">
             <li>
               <span>01</span>
               <strong>BUILD</strong>
-              <p>kod i narzędzia</p>
+              <p>strona od kompletnego zera</p>
             </li>
             <li>
               <span>02</span>
               <strong>LAUNCH</strong>
-              <p>hosting i domena</p>
+              <p>GitHub, hosting i domena</p>
             </li>
             <li>
               <span>03</span>
               <strong>RANK</strong>
-              <p>SEO od podstaw</p>
+              <p>SEO i Google Search Console</p>
             </li>
             <li>
               <span>04</span>
               <strong>SELL</strong>
-              <p>klienci i sprzedaż</p>
+              <p>cold calling i domykanie</p>
             </li>
           </ul>
         </div>
 
-        <aside class="product reveal-item" aria-label="Oferta Vavo Academy">
+        <aside class="product reveal-item" data-tilt aria-label="Oferta Vavo Academy">
           <div class="product__visual">
+            <span class="promo-badge">−80%</span>
+            <div class="visual-scan"></div>
             <div class="orbit orbit--outer"></div>
             <div class="orbit orbit--inner"></div>
             <div class="product__glow"></div>
-            <img src="vavo-mark.webp" alt="Logo Vavo Academy">
+            <img src="vavo-logo-white.png" alt="Logo Vavo Academy">
             <span class="visual-label visual-label--left">SYSTEM / 01</span>
             <span class="visual-label visual-label--right">VAVO / 2026</span>
           </div>
 
           <div class="product__info">
             <div>
-              <span class="product__label">PEŁNY DOSTĘP</span>
-              <strong class="product__price"><span data-price>250</span><sup>PLN</sup></strong>
+              <span class="product__label">PREORDER / PIERWSZE 50 OSÓB</span>
+              <strong class="product__price"><span data-price>50</span><sup>PLN</sup></strong>
             </div>
-            <p>Jednorazowa płatność</p>
+            <div class="product__regular">
+              <span>PLANOWANA CENA</span>
+              <s>250 PLN</s>
+            </div>
           </div>
 
-          <a class="cta" href="#" data-checkout>
-            <span>DOŁĄCZ DO VAVO</span>
+          <a class="cta" href="https://buy.stripe.com/3cIeVd1qnbiU3ey0c0dby00" rel="noopener" data-checkout>
+            <span>KUP PREORDER — 50 ZŁ</span>
             <i aria-hidden="true">↗</i>
           </a>
 
-          <p class="product__date"><span></span> PREMIERA 31.08.2026</p>
+          <div class="sales-meta">
+            <p><i>✓</i> JEDNORAZOWA PŁATNOŚĆ</p>
+            <p><i>✓</i> PEŁNY DOSTĘP DO KURSU</p>
+          </div>
+          <div class="scarcity">
+            <div><span>LIMITOWANA CENA</span><strong>TYLKO 50 DOSTĘPÓW</strong></div>
+            <i></i>
+          </div>
+          <p class="product__date"><span></span> PREMIERA NAJPÓŹNIEJ 31.08.2026</p>
         </aside>
       </section>
 
@@ -130,13 +145,6 @@
         </nav>
       </footer>
     </main>
-
-    <div class="checkout-note" role="dialog" aria-modal="true" aria-labelledby="checkout-title" hidden>
-      <button type="button" aria-label="Zamknij" data-close>×</button>
-      <span>VAVO ACADEMY</span>
-      <h2 id="checkout-title">Podepnij nowy link Stripe za 250 zł.</h2>
-      <p>Obecny link prowadzi do starej ceny 50 zł, dlatego bezpiecznie go odłączyliśmy.</p>
-    </div>
 
     <script src="script.js?v=2"></script>
   </body>
