@@ -11,13 +11,15 @@
     <meta property="og:locale" content="pl_PL">
     <meta property="og:site_name" content="Vavo Academy">
     <meta property="og:url" content="https://vavoacademy.pl/">
+    <meta property="og:image" content="https://vavoacademy.pl/vavo-logo-white.png">
     <link rel="canonical" href="https://vavoacademy.pl/">
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="vavo-logo-white.png" type="image/png">
     <link rel="manifest" href="site.webmanifest">
+    <link rel="preload" href="vavo-logo-white.png" as="image" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=5">
+    <link rel="stylesheet" href="style.css?v=7">
     <title>Vavo Academy — system tworzenia i sprzedaży stron</title>
     <script type="application/ld+json">
       {
@@ -39,9 +41,17 @@
   <body>
     <main class="landing">
       <div class="intro" aria-hidden="true">
-        <div class="intro-mark">V</div>
-        <p>VAVO ACADEMY</p>
-        <span></span>
+        <div class="intro__scan"></div>
+        <div class="intro__center">
+          <div class="intro__logo-wrap">
+            <img class="intro__logo" src="vavo-logo-white.png" alt="">
+          </div>
+          <p class="intro__wordmark">VAVO <span>ACADEMY</span></p>
+          <div class="intro__progress"><i></i></div>
+          <p class="intro__status">SYSTEM ONLINE / 01</p>
+        </div>
+        <div class="intro__panel intro__panel--top"></div>
+        <div class="intro__panel intro__panel--bottom"></div>
       </div>
 
       <div class="bg-word" aria-hidden="true">VAVO ACADEMY</div>
@@ -51,7 +61,7 @@
 
       <header class="topbar enter enter-1">
         <a class="brand" href="#" aria-label="Vavo Academy — strona główna">
-          <span class="brand-mark">V</span>
+          <span class="brand-mark"><img src="vavo-logo-white.png" alt=""></span>
           <span class="brand-copy">
             <strong>VAVO</strong>
             <small>ACADEMY</small>
