@@ -45,7 +45,7 @@ function drawField() {
     const wave = Math.sin(frame * 2 + i * 0.62) * 24;
     const gradient = ctx.createLinearGradient(width * 0.28, 0, width, 0);
     gradient.addColorStop(0, "rgba(255,255,255,0)");
-    gradient.addColorStop(0.48, `rgba(224,218,207,${0.025 + i * 0.0015})`);
+    gradient.addColorStop(0.48, `rgba(199,255,63,${0.022 + i * 0.0015})`);
     gradient.addColorStop(1, "rgba(255,255,255,0)");
 
     ctx.beginPath();
@@ -74,26 +74,3 @@ window.addEventListener("pointermove", (event) => {
 
 resizeCanvas();
 drawField();
-
-const cursorLight = document.querySelector(".cursor-light");
-const tiltCard = document.querySelector("[data-tilt]");
-
-if (matchMedia("(pointer: fine)").matches) {
-  window.addEventListener("pointermove", (event) => {
-    if (cursorLight) {
-      cursorLight.style.left = `${event.clientX}px`;
-      cursorLight.style.top = `${event.clientY}px`;
-    }
-  });
-
-  tiltCard?.addEventListener("pointermove", (event) => {
-    const rect = tiltCard.getBoundingClientRect();
-    const x = (event.clientX - rect.left) / rect.width - 0.5;
-    const y = (event.clientY - rect.top) / rect.height - 0.5;
-    tiltCard.style.transform = `perspective(1100px) rotateX(${y * -5}deg) rotateY(${x * 7}deg) translateY(-3px)`;
-  });
-
-  tiltCard?.addEventListener("pointerleave", () => {
-    tiltCard.style.transform = "perspective(1100px) rotateX(0) rotateY(0) translateY(0)";
-  });
-}

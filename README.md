@@ -1,12 +1,12 @@
-# Vavo Academy — landing preorderu 50 zł
+# Vavo Academy — system od zera do 10K
 
-Gotowa statyczna paczka pod GitHub Pages lub Vercel.
+Gotowa statyczna paczka landing page preorderu 50 zł pod GitHub Pages lub Vercel.
 
 ## Pliki
 
 - `index.html` — główny ekran
 - `style.css` — wygląd i wersja mobilna
-- `script.js` — delikatny ruch tła
+- `script.js` — animacja wejścia i delikatny ruch tła
 - `vavo-logo-white.png` — biały znak V z przezroczystym tłem
 - `favicon.svg` — ikona strony
 - `regulamin.html` i `polityka-prywatnosci.html` — robocze strony prawne
