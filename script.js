@@ -5,18 +5,18 @@ const closeButton = document.querySelector(".program-panel__close");
 
 function openProgram() {
   if (!modal) return;
+  modal.hidden = false;
   modal.removeAttribute("inert");
-  modal.classList.add("is-open");
   modal.setAttribute("aria-hidden", "false");
   document.body.classList.add("modal-open");
-  window.setTimeout(() => closeButton?.focus(), 120);
+  closeButton?.focus();
 }
 
 function closeProgram() {
   if (!modal) return;
-  modal.classList.remove("is-open");
   modal.setAttribute("aria-hidden", "true");
   modal.setAttribute("inert", "");
+  modal.hidden = true;
   document.body.classList.remove("modal-open");
   openButton?.focus();
 }
@@ -25,5 +25,5 @@ openButton?.addEventListener("click", openProgram);
 closeButtons.forEach((button) => button.addEventListener("click", closeProgram));
 
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape" && modal?.classList.contains("is-open")) closeProgram();
+  if (event.key === "Escape" && modal && !modal.hidden) closeProgram();
 });
