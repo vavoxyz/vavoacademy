@@ -1,0 +1,9 @@
+{
+  "name": "Vavo Academy",
+  "short_name": "Vavo",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#02040a",
+  "theme_color": "#02040a",
+  "icons": []
+}
