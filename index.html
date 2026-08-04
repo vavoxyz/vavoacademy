@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#02040a">
-    <meta name="description" content="Zbuduj markę od zera. Kompletny system tworzenia stron, pozyskiwania klientów i sprzedaży z coachingiem 1:1.">
+    <meta name="description" content="Od pierwszej strony do pierwszej sprzedaży. Kompletny system tworzenia stron, pozyskiwania klientów i sprzedaży z coachingiem 1:1.">
     <meta property="og:title" content="Vavo Academy — system tworzenia i sprzedaży stron">
     <meta property="og:description" content="Blueprint 100K, tworzenie stron, klienci, cold calling, sprzedaż oraz coaching 1:1 ze mną.">
     <meta property="og:type" content="website">
@@ -12,6 +12,10 @@
     <meta property="og:site_name" content="Vavo Academy">
     <meta property="og:url" content="https://vavoacademy.pl/">
     <meta property="og:image" content="https://vavoacademy.pl/vavo-logo-white.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vavo Academy — system tworzenia i sprzedaży stron">
+    <meta name="twitter:description" content="Blueprint 100K, tworzenie stron, klienci, sprzedaż oraz coaching 1:1.">
+    <meta name="twitter:image" content="https://vavoacademy.pl/vavo-logo-white.png">
     <link rel="canonical" href="https://vavoacademy.pl/">
     <link rel="icon" href="vavo-logo-white.png" type="image/png">
     <link rel="manifest" href="site.webmanifest">
@@ -19,8 +23,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=14">
-    <script src="script.js?v=2" defer></script>
+    <link rel="stylesheet" href="style.css?v=15">
+    <script src="tracking-config.js?v=1" defer></script>
+    <script src="tracking.js?v=1" defer></script>
+    <script src="script.js?v=3" defer></script>
     <title>Vavo Academy — system tworzenia i sprzedaży stron</title>
     <script type="application/ld+json">
       {
@@ -33,6 +39,7 @@
           "@type": "Offer",
           "price": "50",
           "priceCurrency": "PLN",
+          "priceValidUntil": "2026-08-31",
           "availability": "https://schema.org/LimitedAvailability",
           "url": "https://buy.stripe.com/3cIeVd1qnbiU3ey0c0dby00"
         }
@@ -52,7 +59,7 @@
       <div class="beams" aria-hidden="true"><i></i><i></i><i></i></div>
 
       <header class="topbar enter enter-1">
-        <a class="brand" href="#" aria-label="Vavo Academy — strona główna">
+        <a class="brand" href="/" aria-label="Vavo Academy — strona główna">
           <span class="brand-mark"><img src="vavo-logo-white.png" alt=""></span>
           <span class="brand-copy">
             <strong>VAVO</strong>
@@ -66,7 +73,7 @@
           <p class="eyebrow enter enter-2"><span></span> SYSTEM TWORZENIA I SPRZEDAŻY STRON</p>
           <h1 class="enter enter-3">
             Zbuduj markę od zera.
-            <em>Poznaj system dojścia do 10K miesięcznie.</em>
+            <em>Od pierwszej strony do pierwszej sprzedaży.</em>
           </h1>
           <p class="lead enter enter-4">
             Nie uczysz się samego kodu. Dostajesz sprawdzony system: budujesz stronę,
@@ -103,10 +110,14 @@
             <li><span>✓</span><p>Coaching 1:1 i bezpośrednie rozmowy ze mną</p></li>
             <li><span>✓</span><p>Personalny support bez zostawiania Cię z problemem</p></li>
           </ul>
-          <a class="buy-button" href="https://buy.stripe.com/3cIeVd1qnbiU3ey0c0dby00" rel="noopener">
+          <a class="buy-button" href="https://buy.stripe.com/3cIeVd1qnbiU3ey0c0dby00" rel="noopener" data-checkout-link data-track="initiate-checkout" aria-label="Kup preorder Vavo Academy za 50 zł przez Stripe">
             <span>KUP PREORDER — 50 ZŁ</span><i aria-hidden="true">↗</i>
           </a>
+          <div class="checkout-trust" role="group" aria-label="Informacje o płatności">
+            <span>SZYFROWANA PŁATNOŚĆ</span><span>BLIK / KARTA</span><span>STRIPE</span>
+          </div>
           <div class="launch"><p><span></span> PREMIERA NAJPÓŹNIEJ 31.08.2026</p><strong>50 MIEJSC</strong></div>
+          <p class="purchase-consent">Kupując, akceptujesz <a href="regulamin.html">regulamin</a> i zapoznajesz się z <a href="polityka-prywatnosci.html">polityką prywatności</a>.</p>
           <p class="result-note">Pokazuję mój realny proces. Wynik zależy od Twojej pracy i nie jest gwarantowany.</p>
         </aside>
       </section>
@@ -114,6 +125,8 @@
       <footer class="footer enter enter-6">
         <p>© 2026 VAVO ACADEMY</p>
         <nav aria-label="Informacje prawne">
+          <button type="button" data-cookie-settings hidden>COOKIES</button>
+          <a href="mailto:jakubskrzypiec.dev@gmail.com">KONTAKT</a>
           <a href="regulamin.html">REGULAMIN</a>
           <a href="polityka-prywatnosci.html">PRYWATNOŚĆ</a>
         </nav>
@@ -148,7 +161,7 @@
 
         <footer class="program-panel__foot">
           <p>To nie zbiór przypadkowych lekcji. To kompletny proces, który przeprowadzi Cię od zera do gotowej oferty i rozmowy z klientem.</p>
-          <a href="https://buy.stripe.com/3cIeVd1qnbiU3ey0c0dby00" rel="noopener">KUP PREORDER — 50 ZŁ <span>↗</span></a>
+          <a href="https://buy.stripe.com/3cIeVd1qnbiU3ey0c0dby00" rel="noopener" data-checkout-link data-track="initiate-checkout">KUP PREORDER — 50 ZŁ <span>↗</span></a>
         </footer>
       </section>
     </div>
